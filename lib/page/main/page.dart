@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_starter/components/custom_bottom_navigation_bar.dart';
 import 'package:flutter_starter/components/simple_bottom_navigation_bar.dart';
 import 'package:flutter_starter/page/home/page.dart';
 import 'package:flutter_starter/page/user/page.dart';
@@ -24,6 +25,7 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       body: PageView(
         controller: _controller,
         onPageChanged: _handlePageChanged,
@@ -33,7 +35,7 @@ class _MainPageState extends State<MainPage> {
           UserPage(),
         ],
       ),
-      bottomNavigationBar: SimpleBottomNavigationBar(
+      bottomNavigationBar: CustomBottomNavigationBar(
         currentIndex: _currentIndex,
         onTap: (index) {
           _controller.jumpToPage(index);
