@@ -28,6 +28,7 @@ class _WalletPageState extends State<WalletPage>
   @override
   Widget build(BuildContext context) {
     logI('[debug]build wallet page');
+    super.build(context);
     return Scaffold(
       body: Container(
         color: Colors.amberAccent,
