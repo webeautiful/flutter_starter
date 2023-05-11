@@ -3,10 +3,9 @@ import 'package:logger/logger.dart';
 const String _tag = "demo";
 
 var _logger = Logger(
-  printer: PrettyPrinter(
-    methodCount: 0,
-  )
-);
+    printer: PrettyPrinter(
+  methodCount: 0,
+));
 
 void logV(String msg) {
   _logger.v("$_tag :: $msg");
@@ -27,4 +26,3 @@ void logW(String msg) {
 void logE(String msg) {
   _logger.e("$_tag :: $msg");
 }
-

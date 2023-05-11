@@ -16,35 +16,39 @@ class CustomBottomNavigationBar extends StatelessWidget {
   final _activeColor = RootColors.primary;
 
   Widget _buildBarItem(int index) {
-    List<IconData> iconList = [Icons.home, Icons.account_balance_wallet, Icons.person];
-    return  Expanded(
+    List<IconData> iconList = [
+      Icons.home,
+      Icons.account_balance_wallet,
+      Icons.person
+    ];
+    return Expanded(
         child: InkWell(
-          onTap: () {
-            onTap?.call(index);
-          },
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(
-                iconList[index],
-                size: 22,
-                color: currentIndex == index ? _activeColor : _defaultColor,
-              ),
-              const SizedBox(
-                height: 5,
-              ),
-              if (currentIndex == index) Container(
-                width: 4,
-                height: 4,
-                decoration: BoxDecoration(
-                  color: _activeColor,
-                  borderRadius: const BorderRadius.all(Radius.circular(2)),
-                ),
-              ),
-            ],
+      onTap: () {
+        onTap?.call(index);
+      },
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Icon(
+            iconList[index],
+            size: 22,
+            color: currentIndex == index ? _activeColor : _defaultColor,
           ),
-        )
-    );
+          const SizedBox(
+            height: 5,
+          ),
+          if (currentIndex == index)
+            Container(
+              width: 4,
+              height: 4,
+              decoration: BoxDecoration(
+                color: _activeColor,
+                borderRadius: const BorderRadius.all(Radius.circular(2)),
+              ),
+            ),
+        ],
+      ),
+    ));
   }
 
   @override
@@ -57,8 +61,7 @@ class CustomBottomNavigationBar extends StatelessWidget {
           height: 60,
           decoration: const BoxDecoration(
               color: Colors.black,
-              borderRadius: BorderRadius.all(Radius.circular(18))
-          ),
+              borderRadius: BorderRadius.all(Radius.circular(18))),
           child: Row(
             children: List<Widget>.generate(3, (index) => _buildBarItem(index)),
           ),

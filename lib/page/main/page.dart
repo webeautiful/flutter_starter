@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_starter/components/custom_bottom_navigation_bar.dart';
-import 'package:flutter_starter/components/simple_bottom_navigation_bar.dart';
 import 'package:flutter_starter/page/home/page.dart';
 import 'package:flutter_starter/page/user/page.dart';
 import 'package:flutter_starter/page/wallet/page.dart';
@@ -42,7 +41,7 @@ class _MainPageState extends State<MainPage> {
           setState(() {
             _currentIndex = index;
           });
-        } ,
+        },
       ),
     );
   }

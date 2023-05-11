@@ -8,8 +8,7 @@ class UserPage extends StatefulWidget {
   State<UserPage> createState() => _WalletPageState();
 }
 
-class _WalletPageState extends State<UserPage>  {
-
+class _WalletPageState extends State<UserPage> {
   @override
   void initState() {
     super.initState();
