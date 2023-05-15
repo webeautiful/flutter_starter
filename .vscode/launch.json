@@ -5,6 +5,15 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "widgetbook",
+      "type": "dart",
+      "request": "launch",
+      "program": "widgetbook/main.dart",
+      "args": [
+        "-dwindows"
+      ]
+    },
+    {
       "name": "flutter_starter",
       "request": "launch",
       "type": "dart"
@@ -20,6 +29,6 @@
       "request": "launch",
       "type": "dart",
       "flutterMode": "release"
-    }
+    },
   ]
 }
