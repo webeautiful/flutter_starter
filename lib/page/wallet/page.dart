@@ -30,11 +30,16 @@ class _WalletPageState extends State<WalletPage>
     logI('[debug]build wallet page');
     super.build(context);
     return Scaffold(
+      appBar: AppBar(
+        title: const Center(
+          child: Text(
+            'bar title',
+          ),
+        ),
+      ),
       body: Container(
         color: Colors.amberAccent,
-        child: const Center(
-          child: Text('wallet page'),
-        ),
+        child: const Text('wallet page'),
       ),
     );
   }

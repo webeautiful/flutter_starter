@@ -9,13 +9,12 @@ class HomePage extends StatelessWidget {
     logI('[debug]build home page');
     return Container(
       color: Colors.greenAccent,
-      child: const Column(
-        children: [
-          FloatingActionButton(
-            onPressed: null,
-            child: TextField(),
-          ),
-        ],
+      child: const SafeArea(
+        child: Column(
+          children: [
+            SearchBar(),
+          ],
+        ),
       ),
     );
   }
