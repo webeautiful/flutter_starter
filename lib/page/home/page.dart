@@ -12,7 +12,9 @@ class HomePage extends StatelessWidget {
       child: const SafeArea(
         child: Column(
           children: [
-            SearchBar(),
+            SearchBar(
+              hintText: 'Search...',
+            ),
           ],
         ),
       ),

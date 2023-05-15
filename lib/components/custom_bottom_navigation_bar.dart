@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_starter/theme/root_colors.dart';
+import 'package:flutter_starter/styles/app_colors.dart';
 
 class CustomBottomNavigationBar extends StatelessWidget {
   const CustomBottomNavigationBar({
@@ -13,7 +13,7 @@ class CustomBottomNavigationBar extends StatelessWidget {
   final int currentIndex;
 
   final _defaultColor = Colors.white;
-  final _activeColor = RootColors.primary;
+  final _activeColor = AppColors.primary;
 
   Widget _buildBarItem(int index) {
     List<IconData> iconList = [
