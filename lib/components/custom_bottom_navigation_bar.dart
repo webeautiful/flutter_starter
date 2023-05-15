@@ -55,7 +55,7 @@ class CustomBottomNavigationBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return BottomAppBar(
       color: Colors.transparent,
-      elevation: 1,
+      elevation: 0.5,
       child: Center(
         child: Container(
           height: 60,
