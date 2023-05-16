@@ -31,9 +31,11 @@ class _WalletPageState extends State<WalletPage>
     super.build(context);
     return Scaffold(
       appBar: AppBar(
-        title: const Center(
-          child: Text(
-            'bar title',
+        title: const TextField(
+          decoration: InputDecoration(
+            constraints: BoxConstraints(
+              maxHeight: 38,
+            ),
           ),
         ),
       ),
