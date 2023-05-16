@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_starter/router.dart';
 import 'package:flutter_starter/utils/log_util.dart';
 
 class UserPage extends StatefulWidget {
@@ -24,11 +25,17 @@ class _WalletPageState extends State<UserPage> {
   @override
   Widget build(BuildContext context) {
     logI('[debug]build user page');
-    return Scaffold(
-      body: Container(
-        color: Colors.orangeAccent,
-        child: const Center(
-          child: Text('user page'),
+    return Container(
+      color: Colors.deepOrange,
+      child: SafeArea(
+        child: Column(
+          children: [
+            const Text('user page'),
+            ElevatedButton(
+              onPressed: () => appRouter.push(RoutePaths.userInfo('10')),
+              child: const Text('go /user/10'),
+            ),
+          ],
         ),
       ),
     );
