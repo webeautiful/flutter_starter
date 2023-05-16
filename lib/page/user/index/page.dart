@@ -33,7 +33,7 @@ class _WalletPageState extends State<UserPage> {
             const Text('user page'),
             ElevatedButton(
               onPressed: () => appRouter.push(RoutePaths.userInfo('10')),
-              child: const Text('go /user/10'),
+              child: const Text('push /user/10'),
             ),
           ],
         ),
