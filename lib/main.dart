@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_starter/logic/locale_logic.dart';
 import 'package:flutter_starter/router.dart';
 import 'package:flutter_starter/styles/app_colors.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-void main() {
+LocaleLogic localeLogic = LocaleLogic();
+
+void main() async {
   runApp(const MyApp());
+  await localeLogic.load();
 }
 
 class MyApp extends StatelessWidget {
@@ -25,6 +30,10 @@ class MyApp extends StatelessWidget {
       // routeInformationProvider: appRouter.routeInformationProvider,
       // routeInformationParser: appRouter.routeInformationParser,
       // routerDelegate: appRouter.routerDelegate,
+
+      // l10n
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
     );
   }
 }
@@ -116,3 +125,6 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
+/// Global helpers for readability
+AppLocalizations get $t => localeLogic.strings;

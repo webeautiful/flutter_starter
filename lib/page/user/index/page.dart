@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_starter/main.dart';
 import 'package:flutter_starter/router.dart';
 import 'package:flutter_starter/utils/log_util.dart';
 
@@ -35,6 +36,10 @@ class _WalletPageState extends State<UserPage> {
               onPressed: () => appRouter.push(RoutePaths.userInfo('10')),
               child: const Text('push /user/10'),
             ),
+            ElevatedButton(
+              onPressed: () => localeLogic.loadIfChanged(const Locale('en')),
+              child: Text($t.languageSwitch),
+            )
           ],
         ),
       ),
