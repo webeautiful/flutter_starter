@@ -41,7 +41,15 @@ class _WalletPageState extends State<WalletPage>
       ),
       body: Container(
         color: Colors.amberAccent,
-        child: const Text('wallet page'),
+        child: const Column(
+          children: [
+            Text('wallet page'),
+            ElevatedButton(
+              onPressed: null,
+              child: Text('Riverpod'),
+            )
+          ],
+        ),
       ),
     );
   }

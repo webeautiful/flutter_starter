@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_starter/main.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_starter/components/language_radio.dart';
 import 'package:flutter_starter/router.dart';
 import 'package:flutter_starter/utils/log_util.dart';
 
-class UserPage extends StatefulWidget {
+class UserPage extends ConsumerStatefulWidget {
   const UserPage({Key? key}) : super(key: key);
 
   @override
-  State<UserPage> createState() => _WalletPageState();
+  ConsumerState<UserPage> createState() => _WalletPageState();
 }
 
-class _WalletPageState extends State<UserPage> {
+class _WalletPageState extends ConsumerState<UserPage> {
   @override
   void initState() {
     super.initState();
@@ -36,10 +37,7 @@ class _WalletPageState extends State<UserPage> {
               onPressed: () => appRouter.push(RoutePaths.userInfo('10')),
               child: const Text('push /user/10'),
             ),
-            ElevatedButton(
-              onPressed: () => localeLogic.loadIfChanged(const Locale('en')),
-              child: Text($t.languageSwitch),
-            )
+            const LanguageRadio()
           ],
         ),
       ),

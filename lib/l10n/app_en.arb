@@ -2,5 +2,6 @@
   "helloWorld": "Hello {world}!",
 	"@helloWorld": {"placeholders": {"world": {}}},
   "searchPlaceholder": "Search...",
-  "languageSwitch": "Language Switch"
+  "zh": "Chinese",
+  "en": "English"
 }

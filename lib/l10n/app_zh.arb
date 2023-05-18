@@ -2,5 +2,6 @@
   "helloWorld": "您好，{world}!",
   "@helloWorld": {"placeholders": {"world": {}}},
   "searchPlaceholder": "搜索...",
-  "languageSwitch": "语言切换"
+  "zh": "中文",
+  "en": "英文"
 }

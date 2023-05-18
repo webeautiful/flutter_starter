@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_starter/components/custom_bottom_navigation_bar.dart';
+import 'package:flutter_starter/components/language_radio.dart';
 import 'package:flutter_starter/components/simple_bottom_navigation_bar.dart';
 import 'package:flutter_starter/page/home/page.dart';
 import 'package:flutter_starter/page/main/page.dart';
@@ -56,10 +57,10 @@ class HotReload extends StatelessWidget {
           ],
         ),
         WidgetbookCategory(
-          name: 'Bottom navigation bar',
+          name: '基础组件',
           children: [
             WidgetbookComponent(
-              name: 'simple',
+              name: '底部导航',
               useCases: [
                 WidgetbookUseCase(
                   name: 'simple',
@@ -73,11 +74,6 @@ class HotReload extends StatelessWidget {
                     onTap: null,
                   ),
                 ),
-              ],
-            ),
-            WidgetbookComponent(
-              name: 'custom',
-              useCases: [
                 WidgetbookUseCase(
                   name: 'custom',
                   builder: (context) => CustomBottomNavigationBar(
@@ -89,6 +85,20 @@ class HotReload extends StatelessWidget {
                         )
                         .toInt(),
                   ),
+                ),
+              ],
+            ),
+          ],
+        ),
+        WidgetbookCategory(
+          name: '业务组件',
+          children: [
+            WidgetbookComponent(
+              name: '多语言',
+              useCases: [
+                WidgetbookUseCase(
+                  name: 'simple',
+                  builder: (context) => const LanguageRadio(),
                 ),
               ],
             ),
