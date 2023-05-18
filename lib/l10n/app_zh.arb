@@ -3,5 +3,7 @@
   "@helloWorld": {"placeholders": {"world": {}}},
   "searchPlaceholder": "搜索...",
   "zh": "中文",
-  "en": "英文"
+  "en": "英文",
+  "theme": "主题: {mode}",
+	"@theme": {"placeholders": {"mode": {}}}
 }

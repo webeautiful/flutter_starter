@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_starter/components/language_radio.dart';
+import 'package:flutter_starter/components/theme_radio.dart';
 import 'package:flutter_starter/router.dart';
 import 'package:flutter_starter/utils/log_util.dart';
 
@@ -32,12 +33,17 @@ class _WalletPageState extends ConsumerState<UserPage> {
       child: SafeArea(
         child: Column(
           children: [
-            const Text('user page'),
+            const Text('route'),
             ElevatedButton(
               onPressed: () => appRouter.push(RoutePaths.userInfo('10')),
               child: const Text('push /user/10'),
             ),
-            const LanguageRadio()
+            const Divider(),
+            const Text('multilanguage'),
+            const LanguageRadio(),
+            const Divider(),
+            const Text('theme switch'),
+            const ThemeRadio(),
           ],
         ),
       ),

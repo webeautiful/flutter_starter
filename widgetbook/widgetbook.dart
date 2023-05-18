@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_starter/components/custom_bottom_navigation_bar.dart';
 import 'package:flutter_starter/components/language_radio.dart';
 import 'package:flutter_starter/components/simple_bottom_navigation_bar.dart';
+import 'package:flutter_starter/components/theme_radio.dart';
 import 'package:flutter_starter/page/home/page.dart';
 import 'package:flutter_starter/page/main/page.dart';
 import 'package:flutter_starter/page/user/index/page.dart';
@@ -99,6 +100,15 @@ class HotReload extends StatelessWidget {
                 WidgetbookUseCase(
                   name: 'simple',
                   builder: (context) => const LanguageRadio(),
+                ),
+              ],
+            ),
+            WidgetbookComponent(
+              name: '多主题',
+              useCases: [
+                WidgetbookUseCase(
+                  name: 'simple',
+                  builder: (context) => const ThemeRadio(),
                 ),
               ],
             ),
