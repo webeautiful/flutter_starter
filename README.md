@@ -63,6 +63,16 @@ $ cd ./my_project/lib
 $ flutter pub get
 ```
 
+## Checklist
+
+When you use this template, try follow the checklist to update your info properly
+
+- [ ] Restful api via Dio
+- [ ] Splash Screen via flutter_native_splash
+- [ ] Encapsulate storage singletons
+
+And, enjoy :)
+
 ## Why
 
 I have created several Flutter apps recently. Setting the configs up is kinda the bottleneck for me to make the ideas simply come true within a very short time.
