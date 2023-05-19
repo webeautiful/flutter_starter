@@ -46,6 +46,9 @@ dependencies:
   flutter_riverpod: ^2.3.6
   shared_preferences: ^2.1.1
 
+  # dio
+  dio: ^5.1.2
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
