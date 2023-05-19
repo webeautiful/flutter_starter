@@ -1,19 +1,7 @@
 # flutter_starter
 
-A new Flutter project.
+A simple scaffold based on Flutter for quick use with go_router, Riverpod, Dio.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
 
 ## Features
 
@@ -23,23 +11,23 @@ samples, guidance on mobile development, and a full API reference.
 
 - 🍍 [State Management via Riverpod](https://github.com/rrousselGit/riverpod)
 
+- 🎢 [Restful api via Dio](https://github.com/cfug/dio)
+
 - 📦 [Persistent storage via shared_preferences](https://github.com/flutter/packages/tree/main/packages/shared_preferences/shared_preferences)
 
 - 🌍 [Localization via l10n](https://docs.flutter.dev/accessibility-and-localization/internationalization)
 
 - 🎨 [Light/Dark Theme](./lib/components/theme_radio.dart)
 
-- 🎢 [Restful api via Dio](https://github.com/cfug/dio)
-
 - 🐭 [JSON convert to DartBean](https://plugins.jetbrains.com/plugin/11415-flutterjsonbeanfactory) - an Android Studio plugin
+
+- 📃 [Pretty logs via logger](https://github.com/Bungeefan/logger)
 
 - 🔎 [Storybook for Flutter via Widgetbook](https://github.com/widgetbook/widgetbook)
 
 - 😃 [Splash Screen via flutter_native_splash](https://github.com/jonbhanson/flutter_native_splash)
 
 - ♈ [Setting AppName and BundleId via rename](https://github.com/onatcipli/rename)
-
-- 📃 [Pretty logs via logger](https://github.com/Bungeefan/logger)
 
 - 🦾 Null-Safety, of course
 
@@ -58,7 +46,7 @@ samples, guidance on mobile development, and a full API reference.
 Just clone the repo, install project dependencies, and start hacking:
 
 ```
-$ git clone https://github.com/albert/flutter_start.git my_project
+$ git clone https://github.com/webeautiful/flutter_starter my_project
 $ cd ./my_project/lib
 $ flutter pub get
 ```
