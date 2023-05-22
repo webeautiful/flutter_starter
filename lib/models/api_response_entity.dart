@@ -1,20 +1,20 @@
-import 'package:flutter_starter/generated/json/base/json_field.dart';
 import 'package:flutter_starter/models/api_response_entity.g.dart';
 import 'dart:convert';
 
 class ApiResponseEntity<T> {
-	int? code;
-	String? msg;
-	T? data;
+  int? code;
+  String? msg;
+  T? data;
 
-	ApiResponseEntity();
+  ApiResponseEntity();
 
-	factory ApiResponseEntity.fromJson(Map<String, dynamic> json) => $ApiResponseEntityFromJson<T>(json);
+  factory ApiResponseEntity.fromJson(Map<String, dynamic> json) =>
+      $ApiResponseEntityFromJson<T>(json);
 
-	Map<String, dynamic> toJson() => $ApiResponseEntityToJson(this);
+  Map<String, dynamic> toJson() => $ApiResponseEntityToJson(this);
 
-	@override
-	String toString() {
-		return jsonEncode(this);
-	}
+  @override
+  String toString() {
+    return jsonEncode(this);
+  }
 }
