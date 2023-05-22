@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_starter/models/spot_market_entity.dart';
 import 'package:flutter_starter/styles/app_colors.dart';
+import 'package:flutter_starter/utils/format.dart';
 import 'package:flutter_starter/utils/utils.dart';
 
 class MarketList extends StatelessWidget {
@@ -84,10 +85,11 @@ class MarketList extends StatelessWidget {
               ],
             ),
           ),
-          const Expanded(
+          Expanded(
             child: Align(
               alignment: Alignment.centerRight,
-              child: Text('17171.92', style: style1),
+              child: Text(str2num(item.tickerData?.last).toString(),
+                  style: style1),
             ),
           ),
           const Expanded(
