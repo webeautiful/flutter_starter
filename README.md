@@ -55,7 +55,7 @@ $ flutter pub get
 
 When you use this template, try follow the checklist to update your info properly
 
-- [ ] Restful api via Dio
+- [x] Restful api via Dio
 - [ ] Splash Screen via flutter_native_splash
 - [ ] Encapsulate storage singletons
 
