@@ -33,6 +33,9 @@ class _WalletPageState extends State<WalletPage>
       appBar: AppBar(
         title: const TextField(
           decoration: InputDecoration(
+            border: OutlineInputBorder(),
+            hintText: '搜索',
+            contentPadding: EdgeInsets.symmetric(horizontal: 10, vertical: 2),
             constraints: BoxConstraints(
               maxHeight: 38,
             ),
