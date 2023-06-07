@@ -49,6 +49,9 @@ dependencies:
   # dio
   dio: ^5.1.2
 
+  # dialog
+  flutter_smart_dialog: ^4.9.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

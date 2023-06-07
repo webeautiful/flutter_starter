@@ -30,7 +30,9 @@ class HomePage extends ConsumerWidget {
                       l10n.t.helloWorld('world'),
                     ),
                     ElevatedButton(
-                      onPressed: () => ref.read(spotProvider.notifier).load(),
+                      onPressed: () {
+                        ref.read(spotProvider.notifier).load();
+                      },
                       child: const Text('重新加载数据'),
                     ),
                     Expanded(

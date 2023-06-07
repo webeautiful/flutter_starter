@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:flutter_starter/page/home/page.dart';
 import 'package:flutter_starter/page/main/page.dart';
 import 'package:flutter_starter/page/user/index/page.dart';
@@ -15,31 +16,30 @@ class RoutePaths {
       id != null ? '/user/$id' : '/user/:id';
 }
 
-final appRouter = GoRouter(
-  initialLocation: RoutePaths.main,
-  routes: [
-    AppRoute(
-      RoutePaths.main,
-      (state) => const MainPage(),
-    ),
-    AppRoute(
-      RoutePaths.home,
-      (state) => const HomePage(),
-    ),
-    AppRoute(
-      RoutePaths.wallet,
-      (state) => const WalletPage(),
-    ),
-    AppRoute(
-      RoutePaths.user,
-      (state) => const UserPage(),
-    ),
-    AppRoute(
-      RoutePaths.userInfo(),
-      (state) => UserInfo(id: state.params['id']!),
-    ),
-  ],
-);
+final appRouter = GoRouter(initialLocation: RoutePaths.main, routes: [
+  AppRoute(
+    RoutePaths.main,
+    (state) => const MainPage(),
+  ),
+  AppRoute(
+    RoutePaths.home,
+    (state) => const HomePage(),
+  ),
+  AppRoute(
+    RoutePaths.wallet,
+    (state) => const WalletPage(),
+  ),
+  AppRoute(
+    RoutePaths.user,
+    (state) => const UserPage(),
+  ),
+  AppRoute(
+    RoutePaths.userInfo(),
+    (state) => UserInfo(id: state.params['id']!),
+  ),
+], observers: [
+  FlutterSmartDialog.observer
+]);
 
 /// Custom GoRoute sub-class to make the router declaration easier to read
 class AppRoute extends GoRoute {

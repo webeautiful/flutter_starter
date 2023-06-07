@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_starter/api/spot_api.dart';
+import 'package:flutter_starter/components/c_toast.dart';
 import 'package:flutter_starter/models/spot_market_entity.dart';
 
 class AsyncSpotNotifier extends AsyncNotifier<List<SpotMarketItem>> {
@@ -18,7 +19,12 @@ class AsyncSpotNotifier extends AsyncNotifier<List<SpotMarketItem>> {
 
   Future<void> load() async {
     state = const AsyncValue.loading();
-    state = await AsyncValue.guard(() async => _fetch());
+    state = await AsyncValue.guard(() async {
+      CToast.loading();
+      var ret = await _fetch();
+      CToast.success('成功');
+      return ret;
+    });
   }
 }
 

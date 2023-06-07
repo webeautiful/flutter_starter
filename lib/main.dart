@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:flutter_starter/router.dart';
 import 'package:flutter_starter/store/theme.dart';
 import 'package:flutter_starter/styles/app_colors.dart';
@@ -45,6 +46,9 @@ class MyApp extends ConsumerWidget {
       // l10n
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
+
+      // Toast
+      builder: FlutterSmartDialog.init(),
     );
   }
 }
