@@ -9,17 +9,17 @@ class ApiException implements Exception {
 
   ApiException([this.code, this.msg]);
 
-  factory ApiException.fromDioError(DioError error) {
+  factory ApiException.fromDioException(DioException error) {
     switch (error.type) {
-      case DioErrorType.cancel:
+      case DioExceptionType.cancel:
         return BadRequestException(-1, "请求取消");
-      case DioErrorType.connectionTimeout:
+      case DioExceptionType.connectionTimeout:
         return BadRequestException(-1, "连接超时");
-      case DioErrorType.sendTimeout:
+      case DioExceptionType.sendTimeout:
         return BadRequestException(-1, "请求超时");
-      case DioErrorType.receiveTimeout:
+      case DioExceptionType.receiveTimeout:
         return BadRequestException(-1, "响应超时");
-      case DioErrorType.badResponse:
+      case DioExceptionType.badResponse:
         try {
           /// http错误码带业务错误信息
           ApiResponseEntity apiResponse =
@@ -61,8 +61,8 @@ class ApiException implements Exception {
   }
 
   factory ApiException.from(dynamic exception) {
-    if (exception is DioError) {
-      return ApiException.fromDioError(exception);
+    if (exception is DioException) {
+      return ApiException.fromDioException(exception);
     }
     if (exception is ApiException) {
       return exception;
