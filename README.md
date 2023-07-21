@@ -1,6 +1,6 @@
 # flutter_starter
 
-A simple scaffold based on Flutter for quick use with go_router, Riverpod, Dio.
+[`flutter_starter`](https://github.com/webeautiful/flutter_starter) is a simple scaffold based on Flutter for quick use with go_router, Riverpod, Dio.
 
 
 ## Features
